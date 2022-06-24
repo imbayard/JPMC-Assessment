@@ -50,7 +50,7 @@ This is a poorly written application, and we're expecting the candidate to great
   "numberOfTickets": 2
 }
 * Request Body Schema: (name: String, any length) (movieId: Integer, x > 0) (numberOfTickets: Integer, x > 0)
-* Note: ALL FIELDS ARE REQUIRED IN THE REQUEST 
+* Note: **ALL FIELDS ARE REQUIRED IN THE REQUEST** 
 
 ## Error Codes For create-reservation:
 * NUM001: This error code will appear if one of the integer fields is not passed, or if it is passed as a negative number or 0 

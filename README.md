@@ -35,8 +35,9 @@ This is a poorly written application, and we're expecting the candidate to great
 
 # User Guide 
 ## Usage 
-1) The user should first call the get-movie-list API to find which movie he or she would like to create a reservation for.
-2) The user should then call the create-reservation API to create a reservation and determine the total price of the reservation.
+1) Run the SpringBoot Application by entering the following: `mvn spring-boot: run`
+2) The user should first call the get-movie-list API to find which movie he or she would like to create a reservation for.
+3) The user should then call the create-reservation API to create a reservation and determine the total price of the reservation.
 
 ## get-movie-list API 
 * This is a GET method hosted at http://localhost:8080/v1/movie-theater/get-movie-list

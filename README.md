@@ -43,7 +43,7 @@ This is a poorly written application, and we're expecting the candidate to great
 
 ## create-reservation API 
 * This is a POST method hosted at http://localhost:8080/v1/movie-theater/create-reservation
-* Request Body Example:
+* Request Body Example (**Must Be JSON**):
 {
   "name": "Bayard Eton",
   "movieId": 3,

@@ -2,6 +2,7 @@ package com.jpmc.theater.controller;
 
 import com.jpmc.theater.model.*;
 import com.jpmc.theater.service.ReservationService;
+import com.jpmc.theater.util.MovieTheaterUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class MovieTheaterAPIController {
         logger.info("Endpoint {}/get-movie-list hit successfully.", baseEndpoint);
         Theater theater = new Theater(LocalDateProvider.singleton());
 
-        return ResponseEntity.ok(theater.toScheduleModel());
+        return ResponseEntity.ok(MovieTheaterUtil.toScheduleModel(theater.getSchedule()));
     }
 
     /**

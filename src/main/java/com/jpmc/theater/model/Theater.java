@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Theater {
@@ -38,28 +37,5 @@ public class Theater {
 
     public List<Showing> getSchedule() {
         return schedule;
-    }
-
-    /**
-     * The toScheduleModel will convert the schedule to its POJO format
-     *
-     * @return a List of MovieDetailsModels that describe the schedule for the day
-     */
-    public List<ScheduledMovieModel> toScheduleModel() {
-        List<ScheduledMovieModel> outputSchedule = new ArrayList<>();
-        schedule.forEach(showing -> {
-            Movie movie = showing.getMovie();
-            String fee = "$" + Double.toString(showing.getMovieFee());
-            ScheduledMovieModel movieDetails = new ScheduledMovieModel(
-                    showing.getMovieId(),
-                    showing.getStartTime(),
-                    movie.getTitle(),
-                    movie.getRunningTime(),
-                    fee
-            );
-            outputSchedule.add(movieDetails);
-        });
-        logger.info("Printed Schedule: {}", outputSchedule);
-        return outputSchedule;
     }
 }
